@@ -32,3 +32,9 @@ def test_divide_by_zero():
     """This test will FAIL because divide() doesn't handle zero division."""
     with pytest.raises(ValueError, match="Cannot divide by zero"):
         divide(10, 0)
+
+
+def test_divide_handles_zero_divisor():
+    """Verify divide raises ValueError when the divisor is zero."""
+    with pytest.raises(ValueError):
+        divide(10, 0)
