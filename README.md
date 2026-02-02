@@ -18,3 +18,4 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero")
     return a / b
 ```
+
