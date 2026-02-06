@@ -70,3 +70,9 @@ def test_square_root_negative():
     """This test will FAIL - square_root() doesn't handle negative numbers."""
     with pytest.raises(ValueError, match="Cannot calculate square root of negative number"):
         square_root(-4)
+
+
+def test_square_root_handles_negative_input():
+    """Verify square_root raises a specific ValueError for negative input."""
+    with pytest.raises(ValueError, match="Cannot calculate square root of negative number"):
+        square_root(-4)
