@@ -90,3 +90,15 @@ def test_double_none():
     from calculator import double
     with pytest.raises(TypeError, match="Cannot double None"):
         double(None)
+
+
+def test_triple():
+    from calculator import triple
+    assert triple(3) == 9
+
+
+def test_triple_none():
+    """FAIL: triple() doesn't handle None."""
+    from calculator import triple
+    with pytest.raises(TypeError, match="Cannot triple None"):
+        triple(None)

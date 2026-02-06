@@ -55,3 +55,11 @@ def double(n):
     BUG: Doesn't handle None!
     """
     return n * 2
+
+
+def triple(n):
+    """Triple a number.
+    
+    BUG: Crashes on None input!
+    """
+    return n * 3
