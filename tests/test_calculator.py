@@ -51,3 +51,9 @@ def test_power_with_none():
     """This test will FAIL - power() doesn't handle None values."""
     result = power(None, 2)
     assert result is None
+
+
+def test_power_handles_none_base():
+    """Verify power returns None when the base is None."""
+    result = power(None, 2)
+    assert result is None
