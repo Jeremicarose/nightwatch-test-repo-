@@ -15,3 +15,10 @@ def test_cube_none():
     """FAIL: cube() crashes on None."""
     with pytest.raises(TypeError, match="Cannot cube None"):
         cube(None)
+
+
+def test_cube_handles_none_input():
+    """Verify cube raises TypeError with a specific message when input is None."""
+    import pytest
+    with pytest.raises(TypeError, match="Cannot cube None"):
+        cube(None)

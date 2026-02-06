@@ -19,4 +19,6 @@ def cube(n):
     
     BUG: Crashes on None!
     """
+    if n is None:
+        raise TypeError("Cannot cube None")
     return n * n * n
