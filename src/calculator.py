@@ -43,5 +43,7 @@ def square_root(n):
 
     BUG: Doesn't handle negative numbers - will crash with ValueError!
     """
+    if n < 0:
+        raise ValueError("Cannot calculate square root of negative number")
     return math.sqrt(n)
 
