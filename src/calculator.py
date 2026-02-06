@@ -24,3 +24,11 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
+
+
+def power(base, exponent):
+    """Raise base to the power of exponent.
+
+    BUG: Doesn't handle None values - will crash!
+    """
+    return base ** exponent

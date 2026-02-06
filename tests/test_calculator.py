@@ -4,7 +4,7 @@ import pytest
 import sys
 sys.path.insert(0, 'src')
 
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, power
 
 
 def test_add():
@@ -38,3 +38,16 @@ def test_divide_handles_zero_divisor():
     """Verify divide raises ValueError when the divisor is zero."""
     with pytest.raises(ValueError):
         divide(10, 0)
+
+
+def test_power():
+    """Test basic power functionality."""
+    assert power(2, 3) == 8
+    assert power(5, 2) == 25
+    assert power(10, 0) == 1
+
+
+def test_power_with_none():
+    """This test will FAIL - power() doesn't handle None values."""
+    result = power(None, 2)
+    assert result is None
