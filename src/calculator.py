@@ -63,3 +63,11 @@ def triple(n):
     BUG: Crashes on None input!
     """
     return n * 3
+
+
+def half(n):
+    """Return half of n.
+    
+    BUG: Crashes on None!
+    """
+    return n / 2

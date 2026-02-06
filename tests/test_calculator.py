@@ -102,3 +102,15 @@ def test_triple_none():
     from calculator import triple
     with pytest.raises(TypeError, match="Cannot triple None"):
         triple(None)
+
+
+def test_half():
+    from calculator import half
+    assert half(10) == 5
+
+
+def test_half_none():
+    """FAIL: half() crashes on None."""
+    from calculator import half
+    with pytest.raises(TypeError, match="Cannot halve None"):
+        half(None)
