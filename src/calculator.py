@@ -3,9 +3,9 @@
 def add(a, b):
     return a + b
 
-def negate(n):
-    """Return negative of n.
+def increment(n):
+    """Add 1 to n.
     
     BUG: Crashes on None!
     """
-    return -n
+    return n + 1
