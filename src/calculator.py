@@ -47,3 +47,11 @@ def square_root(n):
         raise ValueError("Cannot calculate square root of negative number")
     return math.sqrt(n)
 
+
+
+def double(n):
+    """Double a number.
+    
+    BUG: Doesn't handle None!
+    """
+    return n * 2

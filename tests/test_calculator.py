@@ -76,3 +76,17 @@ def test_square_root_handles_negative_input():
     """Verify square_root raises a specific ValueError for negative input."""
     with pytest.raises(ValueError, match="Cannot calculate square root of negative number"):
         square_root(-4)
+
+
+def test_double():
+    """Test doubling numbers."""
+    from calculator import double
+    assert double(5) == 10
+    assert double(0) == 0
+
+
+def test_double_none():
+    """This will FAIL - double() crashes on None."""
+    from calculator import double
+    with pytest.raises(TypeError, match="Cannot double None"):
+        double(None)
