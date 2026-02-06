@@ -31,4 +31,6 @@ def power(base, exponent):
 
     BUG: Doesn't handle None values - will crash!
     """
+    if base is None:
+        return None
     return base ** exponent
