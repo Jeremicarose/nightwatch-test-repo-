@@ -1,29 +1,22 @@
 """Simple calculator module."""
 
-import math
-
-
 def add(a, b):
     return a + b
-
 
 def subtract(a, b):
     return a - b
 
-
 def multiply(a, b):
     return a * b
-
 
 def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
 
-
-def square(n):
-    """Return n squared.
+def cube(n):
+    """Return n cubed.
     
-    BUG: Doesn't handle None!
+    BUG: Crashes on None!
     """
-    return n * n
+    return n * n * n

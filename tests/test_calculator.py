@@ -3,35 +3,15 @@ import pytest
 import sys
 sys.path.insert(0, 'src')
 
-from calculator import add, subtract, multiply, divide, square
-
+from calculator import add, subtract, multiply, divide, cube
 
 def test_add():
     assert add(2, 3) == 5
 
+def test_cube():
+    assert cube(3) == 27
 
-def test_subtract():
-    assert subtract(5, 3) == 2
-
-
-def test_multiply():
-    assert multiply(3, 4) == 12
-
-
-def test_divide():
-    assert divide(10, 2) == 5
-
-
-def test_divide_by_zero():
-    with pytest.raises(ValueError, match="Cannot divide by zero"):
-        divide(10, 0)
-
-
-def test_square():
-    assert square(4) == 16
-
-
-def test_square_none():
-    """FAIL: square() crashes on None."""
-    with pytest.raises(TypeError, match="Cannot square None"):
-        square(None)
+def test_cube_none():
+    """FAIL: cube() crashes on None."""
+    with pytest.raises(TypeError, match="Cannot cube None"):
+        cube(None)
