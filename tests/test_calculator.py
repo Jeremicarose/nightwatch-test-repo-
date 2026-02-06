@@ -12,3 +12,9 @@ def test_decrement():
 def test_decrement_none():
     with pytest.raises(TypeError, match="Cannot decrement None"):
         decrement(None)
+
+
+def test_decrement_handles_none_type_error_regression():
+    """Verify decrement raises TypeError with the specific 'unsupported operand' message when n is None."""
+    with pytest.raises(TypeError, match="unsupported operand type\\(s\\) for -: 'NoneType' and 'int'"):
+        decrement(None)
