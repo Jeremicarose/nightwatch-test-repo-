@@ -3,15 +3,15 @@ import pytest
 import sys
 sys.path.insert(0, 'src')
 
-from calculator import add, subtract, multiply, divide, cube
+from calculator import add, negate
 
 def test_add():
     assert add(2, 3) == 5
 
-def test_cube():
-    assert cube(3) == 27
+def test_negate():
+    assert negate(5) == -5
 
-def test_cube_none():
-    """FAIL: cube() crashes on None."""
-    with pytest.raises(TypeError, match="Cannot cube None"):
-        cube(None)
+def test_negate_none():
+    """FAIL: negate() crashes on None."""
+    with pytest.raises(TypeError, match="Cannot negate None"):
+        negate(None)
