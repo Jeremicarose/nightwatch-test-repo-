@@ -1,8 +1,8 @@
-"""Simple calculator."""
+"""Calculator."""
 
 def add(a, b):
     return a + b
 
-def decrement(n):
-    """Subtract 1 from n. BUG: Crashes on None!"""
-    return n - 1
+def invert(n):
+    """Return 1/n. BUG: No zero check!"""
+    return 1 / n
