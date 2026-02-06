@@ -1,5 +1,7 @@
 """Simple calculator module with a bug for Nightwatch to fix."""
 
+import math
+
 
 def add(a, b):
     """Add two numbers."""
@@ -34,3 +36,11 @@ def power(base, exponent):
     if base is None:
         return None
     return base ** exponent
+
+
+def square_root(n):
+    """Calculate the square root of n.
+
+    BUG: Doesn't handle negative numbers - will crash with ValueError!
+    """
+    return math.sqrt(n)

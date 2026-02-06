@@ -4,7 +4,7 @@ import pytest
 import sys
 sys.path.insert(0, 'src')
 
-from calculator import add, subtract, multiply, divide, power
+from calculator import add, subtract, multiply, divide, power, square_root
 
 
 def test_add():
@@ -57,3 +57,16 @@ def test_power_handles_none_base():
     """Verify power returns None when the base is None."""
     result = power(None, 2)
     assert result is None
+
+
+def test_square_root():
+    """Test basic square root functionality."""
+    assert square_root(4) == 2.0
+    assert square_root(9) == 3.0
+    assert square_root(0) == 0.0
+
+
+def test_square_root_negative():
+    """This test will FAIL - square_root() doesn't handle negative numbers."""
+    with pytest.raises(ValueError, match="Cannot calculate square root of negative number"):
+        square_root(-4)
